@@ -216,3 +216,10 @@ footer p {
         font-size: 0.9em;
     }
 }
+
+/* Live Chart */
+#token-chart iframe {
+    border: none;
+    width: 100%;
+    height: 500px;
+}

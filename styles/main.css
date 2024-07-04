@@ -1,6 +1,6 @@
 /* Style de base */
 body {
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-family: 'Arial', sans-serif;
     background: linear-gradient(to right, #f0f8ff, #e0f7fa);
     color: #333;
     margin: 0;
@@ -24,7 +24,7 @@ header img.banner {
 }
 
 header h1 {
-    font-size: 2.5em;
+    font-size: 3em;
     margin: 0.5em 0;
     color: #333;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
@@ -70,3 +70,118 @@ main {
     display: block;
     margin: 20px auto;
     border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content-section p,
+.content-section ol {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.content-section a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.content-section a:hover {
+    color: #0056b3;
+}
+
+/* Boutons */
+.btn-dark {
+    background-color: #333;
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+.btn-dark:hover {
+    background-color: #555;
+}
+
+/* Pied de page */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #fff;
+    border-top: 1px solid #ddd;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+    font-size: 1em;
+    color: #555;
+}
+
+/* Parallax */
+.parallax {
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Animations */
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translate3d(0, 100%, 0);
+        opacity: 0;
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes bounceInDown {
+    from, 20%, 40%, 60%, 80%, to {
+        animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+
+    0% {
+        opacity: 0;
+        transform: translate3d(0, -3000px, 0);
+    }
+
+    60% {
+        opacity: 1;
+        transform: translate3d(0, 25px, 0);
+    }
+
+    80% {
+        transform: translate3d(0, -10px, 0);
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+}
+
+.fadeInUp {
+    animation-name: fadeInUp;
+}
+
+.bounceInDown {
+    animation-name: bounceInDown;
+}

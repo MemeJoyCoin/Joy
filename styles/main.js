@@ -18,12 +18,12 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Example of additional interactive features
+// Ensure iframe loads correctly
 document.addEventListener('DOMContentLoaded', function() {
-    const buyButton = document.querySelector('.buy-btn');
-    if (buyButton) {
-        buyButton.addEventListener('click', function() {
-            alert('Thank you for your interest in buying Joy (JOY)! Please follow the steps to purchase.');
+    const iframe = document.querySelector('#token-chart iframe');
+    if (iframe) {
+        iframe.addEventListener('load', function() {
+            console.log('Token chart iframe loaded successfully');
         });
     }
 });
